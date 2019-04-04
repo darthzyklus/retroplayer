@@ -1,5 +1,7 @@
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import tape from './tape.png';
 import './App.css';
 
 class App extends Component {
@@ -7,18 +9,15 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <img src={tape} className="tape" alt="logo" />
+	  <div className="player">
+		<FontAwesomeIcon icon="play-circle" />
+	    	<div className="song">
+	    		<p>Some song</p>
+	    	</div>
+	    	<FontAwesomeIcon icon="backward"/>
+	    	<FontAwesomeIcon icon="forward"/>
+	  </div>
         </header>
       </div>
     );
